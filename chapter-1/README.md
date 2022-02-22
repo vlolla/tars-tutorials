@@ -1,3 +1,18 @@
+
+# Introduction
+
+n this chapter, we will start off by discussing differences between monolithic and microservice architecture. Next we will introduce the TARS Project and we will deep dive into TARS’ microservice ecosystem. We will also compare TARS with other microservice frameworks and discuss some of the advantages of TARS. Last but not least, we will explain what platforms built with TARS consist of and how the service interaction flow looks like.
+
+### By the end of this chapter, you should be able to:
+
+- Have a good understanding of the differences between monolithic and microservice architecture.
+- Discuss what TARS is and what its goals are.
+- Describe the TARS Project microservice ecosystem.
+- Compare different microservice frameworks.
+Explain what platforms built with TARS consist of.
+- Describe service interaction flow.
+
+
 # What is TARS
 
 TARS is a new generation distributed microservice applications framework that was created in 2008. It provides developers and enterprises with a complete set of solutions to build, release, deploy and maintain stable and reliable applications that run at scale.
