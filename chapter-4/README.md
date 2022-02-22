@@ -9,8 +9,8 @@ In the previous chapters, we covered how to install TARS, the fundamental concep
 ## Modules in this chapter.
 
 - [Build your service in TarsGo](./tarsgo.md) 
-- [Build your service in TarsPHP](./tarsphp.md)
+- [Build your service in TarsJava](./tarsjava.md)
 - Build your service in Tars.js.
-- Build your service in TarsJava.
+- Build your service in TarsPHP.
 - Build your service in TarsCPP.
 
