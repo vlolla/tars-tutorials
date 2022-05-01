@@ -33,5 +33,17 @@ services using TARS along with the many useful tips provided by the course.
 
 [Chapter 4. Hello World (Build Your First Service in TARS)](./chapter-4/README.me)
 
-My Credentials:
+
+##  Certified TARS Application Developer Certification
+
+This cources is sufficient enough to take the Certified TARS Application Developer Certification
+
+More details on Certification:
+
+https://training.linuxfoundation.org/certification/linux-foundation-certified-tars-application-developer/?utm_source=lftraining&utm_medium=pr&utm_campaign=ctad0821
+
+
+My Badge: https://www.credly.com/earner/earned/share/02c6ddab-3ae6-41df-b442-35e06a300e97
+
+
 
