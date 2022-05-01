@@ -8,6 +8,10 @@ This section provides the instructions to develop a Hello World service in TarsJ
 
 Since TARS employs the server-client model for development, we will first define the tars file that describes the protocol communication interface, then we will build the server and create the client.
 
+Plesae refer more for the examples on Java -> https://github.com/TarsCloud/TarsJava
+
+
+
 # Build Your Service in TarsJava: Define the Tars File
 
 As the first of server development in TarsJava, we will define the tars file that specifies request methods and field parameters. Let’s create the hello.tars file in the src/main/resources directory and fill the file with the following content:

@@ -133,4 +133,72 @@ At this point, you have gone through deploying the TARS framework and TarsNode i
 
 After you set the admin's password, the page below will be shown below every time you enter the URL.
 
+
+## docker-compose
+
+We provided a docker-compose.yml for you too. The subnet is set to 172.25.1.0/16 in case conflict with the guide in chapter 2 to 4
+
+    version: "3"
+
+    services:
+    mysql:
+        image: mysql:5.6
+        container_name: tars-mysql
+        ports:
+        - "3307:3306"
+        restart: always
+        environment:
+        MYSQL_ROOT_PASSWORD: "123456"
+        volumes:
+        - ./mysql/data:/var/lib/mysql:rw
+        - ./source/Shanghai:/etc/localtime
+        networks:
+        internal:
+            ipv4_address: 172.25.1.2
+    framework:
+        image: tarscloud/framework:v2.4.14
+        container_name: tars-framework
+        ports:
+        - "3000:3000"
+        restart: always
+        networks:
+        internal:
+            ipv4_address: 172.25.1.3
+        environment:
+        MYSQL_HOST: "172.25.1.2"
+        MYSQL_ROOT_PASSWORD: "123456"
+        MYSQL_USER: "root"
+        MYSQL_PORT: 3306
+        REBUILD: "false"
+        INET: eth0
+        SLAVE: "false"
+        volumes:
+        - ./framework/data:/data/tars:rw
+        - ./source/Shanghai:/etc/localtime
+        depends_on:
+        - mysql
+    node:
+        image: tarscloud/tars-node:latest
+        container_name: tars-node
+        restart: always
+        networks:
+        internal:
+            ipv4_address: 172.25.1.5
+        volumes:
+        - ./node/data:/data/tars:rw
+        - ./source/Shanghai:/etc/localtime
+        environment:
+        INET: eth0
+        WEB_HOST: http://172.25.1.3:3000
+        ports:
+        - "9000-9010:9000-9010"
+        depends_on:
+        - framework
+    networks:
+    internal:
+        driver: bridge
+        ipam:
+        config:
+            - subnet: 172.25.1.0/16
+
 Congratulations! You have completed the installation of TarsWeb and TarsFramework on your machine using the Docker approach.
